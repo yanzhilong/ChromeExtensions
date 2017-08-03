@@ -2,32 +2,22 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-chrome.webNavigation.onCompleted.addListener(function(details) {
-
-var url;
-var tab_id = details.tabId;
-   
-});
-
 chrome.tabs.onUpdated.addListener(function (tabId , info) {
   if (info.status === 'complete') {
     // your code ...
 	chrome.tabs.executeScript(tabId, {file: "jquery.min.js"});
-	
-	 
 	chrome.tabs.executeScript(tabId, {file: "current_script.js"});
-	//chrome.tabs.executeScript(null, { file: "jquery.min.js" }, function() {
-	//	chrome.tabs.executeScript(null, { file: "current_script.js" });
-	//});
 	
 	chrome.tabs.get(tabId, function(tab){
 		url = tab.url;
+		title = tab.title;
 		//alert(url);
         var postdata = new Object();
-        postdata.Url=url
+		postdata.Title=title;
+        postdata.Url=url;
         postdata.Browser=getOs();
         postdata.UserId="31ee6e1d-2d8c-4c7b-b1ea-ce53acdd38c3";
-        postdata.Tag="公司电脑";
+        postdata.Tag="Tag";
 
         $.ajax({
 	        type: 'POST',
