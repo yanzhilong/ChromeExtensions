@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "taobao item publish",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
