@@ -17,17 +17,17 @@ chrome.tabs.onUpdated.addListener(function (tabId , info) {
         postdata.Url=url;
         postdata.Browser=getOs();
         postdata.UserId="31ee6e1d-2d8c-4c7b-b1ea-ce53acdd38c3";
-        postdata.Tag="Tag";
+        postdata.Tag="R508";
 
         $.ajax({
 	        type: 'POST',
-	        url: "http://localhost:50116/api/Browsing/",
+	        url: "https://39.108.160.157/api/Browsing/",
 	        data: postdata,
 	        success: function (data) {
-		        //alert("save success");
+		        alert("save success");
 	        },
 	        error: function (xhr, ajaxOptions, thrownError) {
-				//alert("save fail");
+				alert("save fail");
 	        }
         });
 	});	
