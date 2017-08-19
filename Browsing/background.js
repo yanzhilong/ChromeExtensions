@@ -21,7 +21,7 @@ chrome.tabs.onUpdated.addListener(function (tabId , info) {
 
         $.ajax({
 	        type: 'POST',
-	        url: "https://39.108.160.157/api/Browsing/",
+	        url: "http://39.108.160.157:1234/api/Browsing/",
 	        data: postdata,
 	        success: function (data) {
 		        //alert("save success");
