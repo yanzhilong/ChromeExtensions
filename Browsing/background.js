@@ -17,11 +17,11 @@ chrome.tabs.onUpdated.addListener(function (tabId , info) {
         postdata.Url=url;
         postdata.Browser=getOs();
         postdata.UserId="31ee6e1d-2d8c-4c7b-b1ea-ce53acdd38c3";
-        postdata.Tag="R508";
+        postdata.Tag="CR";
 
         $.ajax({
 	        type: 'POST',
-	        url: "http://39.108.160.157:1234/api/Browsing/",
+	        url: "http://39.108.160.157:1234/api/v1/Browsing/",
 	        data: postdata,
 	        success: function (data) {
 		        //alert("save success");
