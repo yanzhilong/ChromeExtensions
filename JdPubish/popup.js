@@ -1,5 +1,5 @@
 
-var url = "http://localhost:50116/api/v1/JDAutos";
+var url = "http://39.108.160.157:1234/api/v1/JDAutos";
 
 $.ajax({
 	type: 'GET',
@@ -19,7 +19,7 @@ $.ajax({
 		});  
 	},
 	error: function (xhr, ajaxOptions, thrownError) {
-		alert(thrownError);
+		alert("错误");
 	}
 });
 
@@ -50,7 +50,7 @@ function jdautoproperties(Id) {
 			jdautocurrent(scriptpara);
 		},
 		error: function (xhr, ajaxOptions, thrownError) {
-			alert(thrownError);
+			alert("错误");
 		}
 	});
 }
