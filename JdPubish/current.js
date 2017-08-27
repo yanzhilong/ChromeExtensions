@@ -19,16 +19,3 @@ $.each(data, function(i) {
 	
 	} 
 });  
-try 
-{ 
-	//福建
-	$("#areaId1").val("16");
-	changeArea1();
-	//泉州
-	$("#areaId2").val("1332");
-
-} 
-catch (e) 
-{ 
-
-} 
